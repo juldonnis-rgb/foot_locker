@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootLockerXkick - Inscription</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="form-container">
+        <section class="form-card">
+            <h1>BRAVO</h1>
+            <h2>Abonnement FLX offert !</h2>
+            <p>Inscris-toi pour recevoir ton abonnement ainsi que ton code promo</p>
+
+            <form action="page3.html" method="GET">
+                <div class="input-group">
+                    <label for="email">Adresse mail*</label>
+                    <input type="email" id="email" name="email" placeholder="ton.email@exemple.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="birthdate">Date de naissance*</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Numéro de téléphone*</label>
+                    <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
+                </div>
+
+                <div class="radio-group">
+                    <p>Genre*</p>
+                    <label class="radio-item">
+                        <input type="radio" name="genre" value="homme" required>
+                        <span>Homme</span>
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="genre" value="femme">
+                        <span>Femme</span>
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="genre" value="autres">
+                        <span>Autres</span>
+                    </label>
+                </div>
+
+                <button type="submit"  action="page2.html" class="btn-submit">VALIDER</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

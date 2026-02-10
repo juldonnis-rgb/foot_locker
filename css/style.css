@@ -1,0 +1,249 @@
+/* 1. Reset et Fond */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Fond gris clair comme sur Figma */
+}
+
+.container {
+    width: 150%;
+    
+    max-width: 800px;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    margin: 0 auto; 
+}
+
+/* 2. Textes */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* 3. Zone de Jeu Responsive */
+.game-zone {
+    background-color: black;
+    aspect-ratio: 16 / 10; /* Garde la forme rectangulaire peu importe la taille */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.game-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Images responsives */
+.goal-img {
+    width: 60%; /* S'adapte à la largeur du rectangle noir */
+    height: auto;
+    mix-blend-mode: screen;
+    filter: contrast(150%) brightness(120%);
+}
+
+
+/* 4. Bouton Style Figma */
+.btn-play {
+    display: inline-block;
+    background-color: #555; /* Gris foncé */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-play:hover {
+    background-color: #333;
+    transform: scale(1.05); /* Petit effet au survol */
+}
+
+/* 5. Media Query pour Mobile */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    p { font-size: 0.9rem; }
+    .ball-img { width: 60px; }
+}
+
+
+/* Container spécifique au formulaire */
+.form-container {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-card {
+    background-color: #d9d9d9; /* Gris du wireframe */
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.form-card h1 { font-size: 2.5rem; margin-bottom: 5px; }
+.form-card h2 { font-size: 1.5rem; margin-bottom: 10px; }
+.form-card p { font-size: 0.9rem; margin-bottom: 25px; color: #444; }
+
+/* Groupes d'input */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px; /* Forme pilule du design */
+    background-color: #666; /* Gris foncé des champs */
+    color: white;
+}
+
+.input-group input::placeholder {
+    color: #bbb;
+}
+
+/* Groupe Radio */
+.radio-group {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.radio-group p { margin-bottom: 10px; font-weight: bold; }
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    background-color: #666;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.radio-item input { margin-right: 10px; }
+
+/* Bouton Valider */
+.btn-submit {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #000;
+}
+
+
+/* Style pour la carte de succès */
+.success-card {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.success-card h1 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.promo-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Le rectangle du code promo */
+.promo-code {
+    background-color: #555; /* Gris moyen */
+    color: white;
+    font-family: 'Courier New', Courier, monospace; /* Police code */
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Bouton Copier */
+.btn-copy {
+    display: block;
+    margin: 0 auto 30px auto;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* La boîte d'information en bas */
+.info-box {
+    background-color: #444; /* Gris très foncé */
+    color: white;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.info-box ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.info-box li {
+    margin-bottom: 5px;
+}
